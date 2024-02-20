@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Air Quality Prediction</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <h1>Air Quality Prediction</h1>
+    <form action="/predict" method="post">
+        <div class="input-group">
+            <label for="PM2.5">PM2.5:</label>
+            <input type="text" id="pm25" name="PM2.5" required>
+
+            <label for="PM10">PM10:</label>
+            <input type="text" id="pm10" name="PM10" required>
+        </div>
+
+        <div class="input-group">
+            <label for="O3">O3:</label>
+            <input type="text" id="o3" name="O3" required>
+
+            <label for="NO2">NO2:</label>
+            <input type="text" id="no2" name="NO2" required>
+        </div>
+
+        <div class="input-group">
+            <label for="CO">CO:</label>
+            <input type="text" id="co" name="CO" required>
+
+            <label for="SO2">SO2:</label>
+            <input type="text" id="so2" name="SO2" required>
+        </div>
+
+        <input type="submit" value="Predict">
+    </form>
+    <script>
+        // JavaScript code to update the result
+        document.addEventListener('DOMContentLoaded', function () {
+            const resultDiv = document.getElementById('prediction_result');
+            const prediction = '{{ prediction }}';  // Get the prediction value from Flask
+
+            if (prediction) {
+                resultDiv.textContent = 'Predicted Air Quality: ' + prediction;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #7ac5d8, #5279a1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the top section */
+.top {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Styling for the heading */
+.heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for quality and result sections */
+.quality, .result, .conclusion {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Styling for strong text within quality, result, and conclusion */
+.quality strong, .result strong, .conclusion strong {
+    font-weight: bold;
+    color: #FF6347;
+    text-align: center;
+}
+
+/* Styling for the values inside quality, result, and conclusion */
+.quality1, .result1, .conclusion1 {
+    font-size: 24px;
+    color: #009900;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    
+}
+
+.result1:contains("Air Quality is Poor"), .result1:contains("Air Quality is Very Poor"), .result1:contains("Air Quality is Severe") {
+    background: linear-gradient(135deg, #ff6666, #ff3333);
+    color: #fff;
+}
