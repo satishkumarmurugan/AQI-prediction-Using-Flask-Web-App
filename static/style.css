@@ -1,111 +1,68 @@
-/* Gradient background with animation */
+/* General body styling */
+html{
+    height:100%;
+}
+
 body {
-    background: linear-gradient(45deg, #4CAF50, #2196F3, #FF5722, #E91E63);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s linear infinite;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* This will be mostly covered by the GIF */
+    color: #ffffff; /* Changed to white for better visibility on dark background */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/background.gif');
+    background-size: cover; /* Ensures the GIF covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; /* Make sure the body takes up at least the viewport height */
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Form container styles with increased size */
-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
-    /* Increased width */
-    margin: 0 auto;
-    padding: 40px;
-    /* Increased padding */
-    border-radius: 15px;
-    /* Increased border radius */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    /* Increased box shadow */
-}
-
-/* Form heading styles */
-h1 {
+/* Custom styling for the container */
+.container {
+    max-width: 400px;
+    margin: 80px auto; /* Adjusted for vertical centering, tweak as needed */
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background for readability */
+    border-radius: 8px; /* Soften the edges */
     text-align: center;
-    font-size: 24px;
-    /* Increased font size */
-    color: #333;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Label styles with increased font size */
-label {
-    display: block;
-    margin-bottom: 10px;
-    /* Increased margin */
-    font-size: 18px;
-    /* Increased font size */
-    color: #333;
-}
-
-/* Text input field styles with increased size */
-.input-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    /* Increased margin */
-}
-
-.input-group label,
-.input-group input {
-    width: 48%;
-    margin-right: 4%;
-    /* Add right margin for the label */
-}
-
-input[type="text"] {
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-    width: 60%;
-    /* Increased width for the input fields */
-}
-
-input[type="text"]:hover {
-    border-color: #666;
-    transition: 1s;
-}
-
-input[type="text"]:focus {
-    border-color: #2196F3;
-    box-shadow: 0 0 8px #2196F3;
-}
-
-/* Submit button styles with increased size */
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    /* Increased padding */
+/* Custom buttons - merged custom and btn styles */
+.btn, .btn-custom {
+    background-color: #007bff; /* Button background color */
+    color: #ffffff; /* Kept text color white for contrast */
+    border-radius: 4px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
-    /* Increased border radius */
     cursor: pointer;
-    font-size: 18px;
-    /* Increased font size */
-    transition: background-color 0.3s;
-    display: block;
-    margin: 0 auto;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+/* Hover effect for both .btn and .btn-custom */
+.btn:hover, .btn-custom:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific classes for text colors, kept for potential text emphasis */
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.center-image img {
+    max-width: 160%;
+    max-height: auto;
 }

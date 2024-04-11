@@ -3,24 +3,26 @@
 
 <head>
     <title>Prediction Result</title>
-    <link rel="stylesheet" type="text/css" href="../static/style1.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    
 </head>
 
 <body>
-    <div class="top">
-        <h1 class="heading">Prediction Result</h1>
-        <br>
-        <p class="quality"><strong>Predicted Air Quality Index: </strong>
-        <div class="quality1">{{prediction}}</div>
-        </p>
-        <br>
-        <p class="result"><strong>Result:</strong>
-        <div class="result1">{{result}}</div>
-        </p>
-        <p class="conclusion"><strong>Conclusion:</strong>
-        <div class="conclusion">{{conclusion}}</div>
-        </p>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="p-3 bg-light border rounded text-center">
+                    <h1 class="text-center">Prediction Result</h1>
+                    <p><strong>Predicted Air Quality Index:</strong> <span class="text-primary">{{prediction}}</span></p>
+                    <p><strong>Result:</strong> <span class="text-success">{{result}}</span></p>
+                    <p><strong>Conclusion:</strong> <span class="text-warning">{{conclusion}}</span></p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

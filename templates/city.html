@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Air Quality Index Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 text-center">Air Quality Index Prediction</h1>
+        <form action="/predict_automatically" method="post">
+            <div class="form-group mt-4">
+                <label for="city_name">Enter the city:</label>
+                <input type="text" class="form-control" id="city_name" name="city_name" placeholder="Enter the city" required>
+            </div>
+            <div class="text-center mt-3"> <!-- Add mt-3 for some margin-top -->
+                <input type="submit" class="btn btn-primary" value="Predict">
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript code to update the result (requires Flask) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resultDiv = document.getElementById('prediction_result');
+            const prediction = '{{ prediction }}';  // Get the prediction value from Flask
+
+            if (prediction) {
+                resultDiv.textContent = 'Predicted Air Quality Index: ' + prediction;
+            }
+        });
+    </script>
+</body>
+
+</html>

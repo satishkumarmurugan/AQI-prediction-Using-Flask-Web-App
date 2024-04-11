@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/home_style.css">
+
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Air Pollution Prediction</h1>
+        <p>
+            Air pollution, with its deleterious effects on human health, ecosystems, and climate, presents a critical environmental challenge. 
+            This challenge is exacerbated by pollutants such as ozone (O3), nitrogen dioxide (NO2), and particulate matter (PM2.5 and PM10),
+            which are indicative of the quality of the air we breathe. In addressing this pervasive issue,
+            our project has pioneered the development of an advanced Air Quality Index (AQI) prediction system. 
+            This innovative tool is engineered to accurately forecast AQI levels by analyzing a spectrum of air components,
+            thereby enabling a proactive response to air quality deterioration.
+        </p>
+        <p>
+            The core of our initiative involved the rigorous development and evaluation of three predictive models: Decision Tree, Linear Regression, and Random Forest. 
+            Through a comprehensive comparative analysis, we identified the model that exhibited unparalleled predictive accuracy and reliability in estimating AQI values. 
+            This selected model forms the foundation of our AQI prediction tool, offering a strategic advantage for health advisories, policy formulation, 
+            and environmental management efforts. By equipping stakeholders with precise AQI predictions, 
+            our project stands as a testament to the power of technological innovation in combating the adverse effects of air pollution and safeguarding public health and the environment.
+        <p class="text-center">
+            Click one of the buttons below to predict Air Quality Index:
+        </p>
+        <a href="/predict_manually" class="btn btn-primary btn-custom">Predict Manually</a>
+        <a href="/predict_automatically" class="btn btn-primary btn-custom">Predict Automatically</a>
+        <a href="/heatmap" class="btn btn-primary btn-custom">Models heatmap</a>
+        
+        <div class="image-container">
+            <img src="../static/AQI_CO.png" alt="Image 1">
+            <img src="../static/AQI_NO2.png" alt="Image 2">
+            <img src="../static/AQI_O3.png" alt="Image 3">
+            <img src="../static/AQI_PM2.5.png" alt="Image 4">
+            <img src="../static/AQI_PM10.png" alt="Image 5">
+            <img src="../static/AQI_SO2.png" alt="Image 6">
+        </div>
+    </div>
+</body>
+</html>
+
+
