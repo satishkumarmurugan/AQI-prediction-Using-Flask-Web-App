@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = joblib.load('airquality.joblib')
 
 # OpenWeather API Key
-API_KEY = '7da13d7d6e899bc7e67dba8775034619'
+API_KEY = 'Enter Your API Key'
 
 @app.route('/')
 def home():
